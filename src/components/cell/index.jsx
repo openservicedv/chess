@@ -14,6 +14,7 @@ const isLightSquare = (position, i) => {
     if (isEven(i + 1) && !isEven(row)) {
         return true;
     }
+
     return false;
 };
 export const Cell = ({cell, index, makeMove, setFromPos}) => {
@@ -29,7 +30,7 @@ export const Cell = ({cell, index, makeMove, setFromPos}) => {
             onDrop={handleDrop}
             onDragOver={event => event.preventDefault()}
         >
-            <div className={`overlay ${isPossibleMove && 'possible-move'}`}>>
+            <div className={`overlay ${isPossibleMove && 'possible-move'}`}>
                 <Piece
                     pos={cell.pos}
                     name={cell.piece}
