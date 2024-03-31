@@ -1,11 +1,12 @@
 // import './App.css';
 import Game from "./pages/game";
+import {GameProvider} from "./context/GameContext";
 
 export default function App() {
-  return (
-    <div>
-        <Game />
-    </div>
-  );
+    return (
+        <GameProvider>
+            <Game/>
+        </GameProvider>
+    );
 }
 
